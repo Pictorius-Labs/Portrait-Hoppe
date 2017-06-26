@@ -110,6 +110,7 @@
   #shop_pic {
     width: 200px;
     float: left;
+    height 150px;
   }
 
   #shop_text {
