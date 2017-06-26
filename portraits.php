@@ -1,7 +1,6 @@
-<div id="img2">
+<div id="img">
   <center>
-    <img src="hoppe.jpg" />
-    <img src="hoppe.jpg" />
+    <img src="img/intropic_1.jpg" />
   </center>
 </div>
 
@@ -30,7 +29,7 @@
 
 <style>
     
-  #img2 img
+  #img img
   {
     margin-right:10px;
     margin-left:10px;

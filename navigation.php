@@ -27,11 +27,6 @@
             Relief
           </li>
         </a>
-        <a href="index.php?show=grabmal&menüpunkt=2">
-          <li>
-            Grabmal
-          </li>
-        </a>
         <a href="index.php?show=vorgehensweise&menüpunkt=2">
           <li>
             Vorgehensweise

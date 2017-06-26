@@ -4,6 +4,8 @@
   <br />
 </div>
 
+<img src="img/052_web.jpg" />
+
 <div id ="kurse">
   
   <?php

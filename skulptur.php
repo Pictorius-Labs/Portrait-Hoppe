@@ -1,18 +1,6 @@
 <div id="img">
   <center>
-    <img src="hoppe.jpg" />
-  </center>
-</div>
-
-<div id="img2">
-  <center>
-    <img src="hoppe.jpg" />
-  </center>
-</div>
-
-<div id="img3">
-  <center>
-    <img src="hoppe.jpg" />
+    <img src="img/intropic_3.jpg" />
   </center>
 </div>
 
@@ -44,22 +32,6 @@
     margin-right:20px;
     height:200px;
     width:200px;
-    float:left;
-  }
-
-  #img2 img
-  {
-
-    margin-right:20px;
-    height:200px;
-    width:250px;
-    float:left;
-  }
-
-  #img3 img
-  {
-    height:200px;
-    width:400px;
     float:left;
   }
 
