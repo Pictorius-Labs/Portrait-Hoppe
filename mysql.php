@@ -1,7 +1,7 @@
 <?php
   class DB {
 	   private static $_db_username 		= "root";
-	   private static $_db_password 		= " ";
+	   private static $_db_password 		= "Nintendo56";
 	   private static $_db_host 		    = "localhost";
 	   private static $_db_name		    = "portrait-hoppe";
 	   private static $_db;	
