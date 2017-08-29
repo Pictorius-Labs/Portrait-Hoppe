@@ -47,7 +47,7 @@
       <?php include('header.php'); ?>
       
       <nav>
-        <?php include('navigation.php'); ?>
+        <?php //include('navigation.php'); ?>
       </nav>
       
       <div id="content">
@@ -85,10 +85,13 @@
   
   #content{
     margin-left : 0px;
-    margin-top: -942px;
+    height: auto;
     padding-bottom: 14em;
     overflow: hidden;
+	margin-top: 100px;
   }
+  
+  
   
 </style>
 

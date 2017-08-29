@@ -105,6 +105,32 @@
     border: #000 solid 1px;
     border-radius: 20px;
   }
+  
+  @media screen and (max-width: 1080px)
+  {
+	  #button
+	  {
+		font-family: Arial;
+		height: 40px;
+		width: 40px;
+		border: #000 solid 1px;
+		border-radius: 20px;
+	  }
+	  
+	  #button p
+	  {
+		display: none;
+	  }
+	  
+	  #button i
+	  {
+		float: left;
+		width: 24px;
+		height: 24px;
+		margin-left: 8px;
+		margin-top: 8px;
+	  }
+  }
    
   #button:hover
   {

@@ -60,7 +60,7 @@
     height: 100%;
     background: #E0E0E0;
     box-shadow: 1px 5px 20px #000;
-    margin-left: -310;
+    margin-left: -310px;
     margin-top: 100px;
   }
    
