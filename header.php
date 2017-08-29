@@ -15,18 +15,18 @@
     <div id="menu_lang">
       <ul>
         <li>
-          <img src="german_flag.png" />
+          <img src="germany_flag.png" />
           <p>Deutsch</p>
         </li>
         <li>
           <a href="">
-            <img src="german_flag.png" />
+            <img src="germany_flag.png" />
             <p>Deutsch</p>
           </a>
         </li>
         <li>
           <a href="">
-            <img src="english_flag.png" />
+            <img src="united_kingdom_flag.png" />
             <p>English</p>
           </a>
         </li>
@@ -149,7 +149,7 @@
     text-decoration: none;
     color: #000;
     margin-top: -70px;
-    margin-left: 75%;
+    margin-left: 76%;
     position: absolute;
   }
   

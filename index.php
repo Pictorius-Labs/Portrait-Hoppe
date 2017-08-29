@@ -84,7 +84,8 @@
   }
   
   #content{
-    margin-left : 0px;
+    margin-left : 20px;
+	margin-right : 20px;
     height: auto;
     padding-bottom: 14em;
     overflow: hidden;

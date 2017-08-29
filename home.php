@@ -205,6 +205,15 @@
 
 <style>
   
+  h1
+  {
+	  color: #3a6770;
+	  font-size: 37px;
+	  text-align: center;
+	  margin-top: 10px;
+	  font-family: Verdana,Arial,Helvetica,sans-serif;
+  }
+  
   #news_home_all {
     float: left;
     width: 50%;
