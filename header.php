@@ -1,6 +1,6 @@
 <header>
   <div id="logo">
-    <a href="index.php?show=home"><img src="logo_top.gif" alt="Burkhard Hoppe Logo" /></a>
+    <a href="index.php?show=home"><img src="img/logo_top.gif" alt="Burkhard Hoppe Logo" /></a>
   </div>
   <div id="menu">
     <i class="material-icons">menu</i>
