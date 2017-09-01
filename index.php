@@ -45,10 +45,8 @@
     <div id="wrapper">
       
       <?php include('header.php'); ?>
-      
-      <nav>
-        <?php //include('navigation.php'); ?>
-      </nav>
+
+      <?php include('navigation.php'); ?>
       
       <div id="content">
         <?php include($show.'.php'); ?>
@@ -69,8 +67,6 @@
   {
     margin: 0;
     padding: 0;
-    font-family: Arial;
-    font-size: 14px;
   }
   
   html, body
@@ -85,14 +81,12 @@
   
   #content{
     margin-left : 20px;
-	margin-right : 20px;
+	   margin-right : 20px;
     height: auto;
     padding-bottom: 14em;
     overflow: hidden;
-	margin-top: 100px;
+	   margin-top: 100px;
   }
-  
-  
   
 </style>
 
@@ -105,7 +99,7 @@
   mButton.onclick = function(){
     if(open == 0)
     {
-      menu.style.marginLeft = 0;
+      menu.style.marginLeft = -20;
       mButton.style.color = "#000";
       menu.style.transition = "margin-left 1s ease-in";
       content.style.transition = "margin-left 1s ease-in";
@@ -118,7 +112,7 @@
       mButton.style.color = "gray";
       menu.style.transition = "margin-left 1s ease-out";
       content.style.transition = "margin-left 1s ease-out";
-      content.style.marginLeft = 0;
+      content.style.marginLeft = 20;
       open = 0;
     }
   }

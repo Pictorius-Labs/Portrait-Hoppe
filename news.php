@@ -1,4 +1,4 @@
-<div id="news_home_titel">
+<div id="news_titel">
   <h2>Neuigkeiten:</h2>
   <br />
 </div>
@@ -33,9 +33,17 @@
 
 <style>
   
+  #news_titel, #news
+  {
+    font-size: 14px;
+	   margin-top: 10px;
+	   font-family: Verdana,Arial,Helvetica,sans-serif;
+    color: #000;
+  }
+  
   #news_titel 
   {
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 20px;
     word-wrap: break-word;
   }
@@ -43,7 +51,8 @@
   #news 
   {
     margin-bottom: 20px;
-    margin-left: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   #news_pic 

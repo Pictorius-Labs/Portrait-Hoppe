@@ -1,5 +1,5 @@
 <div id="vita">
-  <img id="vita_img" src="profil_vita.jpg">
+  <img src="profil_vita.jpg" />
   <table>
     <tr>
       <td id="datum">1965</td>  
@@ -43,6 +43,7 @@
   #vita table 
   {
     padding-left: 20px;
+    padding-top: 2.125%;
   }
   
   #vita #datum 
@@ -54,6 +55,14 @@
   {
     padding-right: 50px;
     padding-top: 20px;
+  }
+  
+  #vita 
+  {
+    margin-top: 20px;
+    margin-left: 6.5%;
+    font-size: 14px;
+	   font-family: Verdana,Arial,Helvetica,sans-serif;
   }
   
 </style>

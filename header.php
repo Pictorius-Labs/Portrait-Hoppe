@@ -15,30 +15,30 @@
     <div id="menu_lang">
       <ul>
         <li>
-          <img src="germany_flag.png" />
+          <img src="img/germany_flag.png" />
           <p>Deutsch</p>
         </li>
         <li>
           <a href="">
-            <img src="germany_flag.png" />
+            <img src="img/germany_flag.png" />
             <p>Deutsch</p>
           </a>
         </li>
         <li>
           <a href="">
-            <img src="united_kingdom_flag.png" />
+            <img src="img/united_kingdom_flag.png" />
             <p>English</p>
           </a>
         </li>
         <li>
           <a href="">
-            <img src="france_flag.png" />
+            <img src="img/france_flag.png" />
             <p>Français</p>
           </a>
         </li>
         <li>
           <a href="">
-            <img src="netherlands_flag.png" />
+            <img src="img/netherlands_flag.png" />
             <p>Nederlands</p>
           </a>
         </li>
@@ -106,31 +106,7 @@
     border-radius: 20px;
   }
   
-  @media screen and (max-width: 1080px)
-  {
-	  #button
-	  {
-		font-family: Arial;
-		height: 40px;
-		width: 40px;
-		border: #000 solid 1px;
-		border-radius: 20px;
-	  }
-	  
-	  #button p
-	  {
-		display: none;
-	  }
-	  
-	  #button i
-	  {
-		float: left;
-		width: 24px;
-		height: 24px;
-		margin-left: 8px;
-		margin-top: 8px;
-	  }
-  }
+  
    
   #button:hover
   {
@@ -248,5 +224,46 @@
     text-decoration: none;
     color: #000;
   }
+  
+  @media screen and (max-width: 1080px)
+  {
+	  
+    #button
+	   {
+      width: 40px;
+	   }
+	  
+	   #button p
+	   {
+		    display: none;
+	   }
+	  
+	   #button i
+	   {
+      margin-left: 8px;
+	   }
+    
+    #menu_lang ul
+    {
+      width: 40px;
+    }
+  
+    #menu_lang ul li img
+    {
+      padding-left: 5px;
+    }
+  
+    #menu_lang ul li p
+    {
+      display: none;
+    }
+  
+    #menu_lang ul li:first-child
+    {
+      height: 40px;
+      width: 40px;
+    }
+    
+}
   
 </style>

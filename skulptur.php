@@ -1,4 +1,4 @@
-<div id="img">
+<div id="image">
   <center>
     <img src="img/intropic_3.jpg" />
   </center>
@@ -6,33 +6,31 @@
 
 <div id="text">
   <p>
-    <center>
-      <h1>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        "Entspannung im Garten,
-        <br />
-        Kult-tour, Ambiente"
-      </h1>
-    </center>
+    <br />
+    "Entspannung im Garten,
+    <br />
+    Kult-tour, Ambiente"
   </p>
 </div>
 
 <style>
-  
-  #img img
+    
+  #image img
   {
-    margin-left:150px;
     margin-right:20px;
-    height:200px;
-    width:200px;
-    float:left;
+    margin-left:20px;
+    margin-top: 20px;
+    height:310px;
+    width:1000px;
   }
-
+  
+  #text p
+  {
+    color: #3a6770;
+	   font-size: 37px;
+	   text-align: center;
+	   margin-top: 10px;
+	   font-family: Verdana,Arial,Helvetica,sans-serif;
+  }
+  
 </style>

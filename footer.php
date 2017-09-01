@@ -28,6 +28,8 @@
     color: #FFF;
     position: absolute;
     bottom: 0;
+    font-size: 14px;
+	   font-family: Verdana,Arial,Helvetica,sans-serif;
   }
    
   #kontakt
@@ -64,7 +66,7 @@
   #links
   {
     height: 20px;
-    width: 130px;
+    width: 140px;
     margin-top: -16px;
     margin-left: 15px
   }
@@ -74,6 +76,11 @@
     text-decoration: none;
     color: #FFF;
     padding-right: 10px; 
+  }
+  
+  #links a:hover, #links a:focus, #links a:active, #kontakt #kontaktdaten p a:hover, #kontakt #kontaktdaten p a:active, #kontakt #kontaktdaten p a:focus
+  {
+    color: #3a6770;
   }
   
 </style>

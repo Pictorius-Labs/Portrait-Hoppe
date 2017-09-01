@@ -16,11 +16,11 @@
   <form id="shop_formular" action="index.php?show=shop" method="post">
     <input id="name" placeholder="Vorname, Name" name="name" size="25" type="text" required/>
     <br />
-    <input id="email" placeholder="Email" name="email" size="25" type="text" required/>
+    <input id="email" placeholder="Email" name="email" size="25" type="email" required/>
     <br />
     <input id="betreff" placeholder="Kauf: <?php echo $betreff ?>" name="betreff" size="25" type="text" disabled="disabled"/>
     <br />
-    <textarea id="nachricht" placeholder="Nachricht hier eingeben..."cols="50" rows="6" name="nachricht"required></textarea>
+    <textarea id="nachricht" placeholder="Nachricht hier eingeben..."cols="50" rows="6" name="nachricht" required></textarea>
     <br />
     <input id="submit" name="submit" type="submit" value="Anfrage senden" />
   </form>
@@ -32,7 +32,7 @@
     {
     // Sammeln der Formulardaten
     $from = "test@portrait-hoppe.de";
-    $to = "markus@die-richerts.de";
+    $to = "windows8user@web.de";
     $subject = "Eine neue Nachricht von portrait-hoppe.de";
     $message = "Guten Tag Herr Hoppe, " 
       . "\n" 
@@ -61,7 +61,7 @@
 
 <?php
     }
-}
+  }
 ?>
     
 <div id ="shop">
@@ -86,8 +86,8 @@
   </div>
   
   <?php
+      }
     }
-  }
   ?>
 
 
@@ -96,15 +96,18 @@
 <style>
 
   #shop_titel {
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin: 20px;
     word-wrap: break-word;
+    font-size: 14px;
+	   font-family: Verdana,Arial,Helvetica,sans-serif;
   }
 
   #shop {
     position: relative;
     margin-bottom: 20px;
-    margin-left: 50px;
+    margin-left: 40px;
+    font-size: 14px;
+	   font-family: Verdana,Arial,Helvetica,sans-serif;
   }
 
   #shop_pic {
@@ -116,10 +119,13 @@
   #shop_text {
     margin-left: 250px;
     margin-bottom: 20px;
+    font-size: 14px;
+	   font-family: Verdana,Arial,Helvetica,sans-serif;
   }
 
   #shop p {
     height: 90px;
+    width: 50%;
     margin-left: 20px;
     margin-top: 10px;
   }
@@ -131,12 +137,16 @@
 
   #shop #cost {
     margin-top: -25px;
-    position: absolute;
-    right:0;
+    margin-right: 20px;
+    margin-left: 55%;
+    font-size: 14px;
+	   font-family: Verdana,Arial,Helvetica,sans-serif;
   }
   
   #shop_formular {
-    margin-left: 50px;
+    margin-left: 20px;
+    font-size: 14px;
+	   font-family: Verdana,Arial,Helvetica,sans-serif;
   }
 
   #shop_formular input, #shop_formular textarea {
@@ -145,11 +155,15 @@
     border: 0px;
     border-radius: 3px;
     border-bottom: 1px solid black;
+    font-size: 14px;
+	   font-family: Verdana,Arial,Helvetica,sans-serif;
   }
 
   #shop_formular textarea{
     max-width: 100%;
     max-height: 35%;
+    font-size: 14px;
+	   font-family: Verdana,Arial,Helvetica,sans-serif;
   }
 
   #shop_formular input:last-child {
@@ -157,5 +171,8 @@
     border-radius: 5px;
     border: 1px solid black;
     width: 120px;
+    font-size: 14px;
+	   font-family: Verdana,Arial,Helvetica,sans-serif;
   }
+  
 </style>

@@ -1,4 +1,4 @@
-<div id="img">
+<div id="image">
   <center>
     <img src="img/intropic_4.jpg" />
   </center>
@@ -6,33 +6,31 @@
 
 <div id="text">
   <p>
-    <center>
-      <h1>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        "Ornamente, Wappen, Symbole und
-        <br />
-        Pictogramme bieten Identit&auml;t"
-      </h1>
-    </center>
+    <br />
+    "Ornamente, Wappen, Symbole und
+    <br />
+    Pictogramme bieten Identität"
   </p>
 </div>
 
 <style>
     
-  #img img
+  #image img
   {
-    margin-right:10px;
-    margin-left:110px;
-    height:200px;
-    width:200px;
-    float:left;
+    margin-right:20px;
+    margin-left:20px;
+    margin-top: 20px;
+    height:310px;
+    width:1000px;
+  }
+  
+  #text p
+  {
+    color: #3a6770;
+	   font-size: 37px;
+	   text-align: center;
+	   margin-top: 10px;
+	   font-family: Verdana,Arial,Helvetica,sans-serif;
   }
   
 </style>

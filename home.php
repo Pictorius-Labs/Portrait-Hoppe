@@ -111,16 +111,16 @@
   <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:600px;height:300px;overflow:hidden;">
 
       <div>
-          <img data-u="image" src="img/1.jpg" />
+          <img data-u="image" src="img/slide_1.jpg" />
       </div>
       <div>
-          <img data-u="image" src="img/2.jpg" />
+          <img data-u="image" src="img/slide_2.jpg" />
       </div>
       <div>
-          <img data-u="image" src="img/3.jpg" />
+          <img data-u="image" src="img/slide_3.jpg" />
       </div>
       <div>
-          <img data-u="image" src="img/4.jpg" />
+          <img data-u="image" src="img/slide_4.jpg" />
       </div>
 
       <a data-u="any" href="https://www.jssor.com" style="display:none">js slider</a>
@@ -137,7 +137,6 @@
 </div>
 <script type="text/javascript">jssor_1_slider_init();</script>
 <!-- #endregion Jssor Slider End -->
-
 
 <br />
 <h1>„Aus meinen Steinen kommt Seele.‟</h1>
@@ -250,6 +249,12 @@
   #kurse_home_all {
     float: left;
     width: 50%;
+  }
+  
+  #kurse_home_all, #news_home_all
+  {
+    font-size: 14px;
+	   font-family: Verdana,Arial,Helvetica,sans-serif;
   }
 
   #kurse_home_titel {

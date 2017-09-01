@@ -7,9 +7,9 @@
 	  <br />
 	  48653 Coesfeld
 	  <br />
-	  Tel. 02541 74 84 22
+	  Tel. +49 2541 74 84 22
 	  <br />
-	  Mobil 0152 21 92 74 24
+	  Mobil +49 152 21 92 74 24
 	  <br />
 	  b.hoppe@portrait-hoppe.de
 	  <br />
@@ -40,8 +40,12 @@
 </div>
 
 <style>
-	#impressum-text
-	{
-		margin-top: 20px;
-	}
+	
+  #impressum-text
+	 {
+		  margin: 20px;
+    font-size: 14px;
+	   font-family: Verdana,Arial,Helvetica,sans-serif;
+  }
+  
 </style>

@@ -7,7 +7,6 @@
 	   private static $_db;	
 	
     
-    
      function __construct() 
      {
       try {
@@ -20,7 +19,7 @@
       }
      }
 
-    function NewsHome () 
+    function NewsHome() 
     {
       $stmt= self::$_db->prepare("SELECT * FROM news ORDER BY `news-id` DESC LIMIT 5");
       $stmt->execute();
@@ -36,7 +35,7 @@
       return $stmt->fetchAll(PDO::FETCH_ASSOC);   
     }
 
-    function News () 
+    function News() 
     {
       $stmt= self::$_db->prepare("SELECT * FROM news ORDER BY `news-id` DESC");
       $stmt->execute();
@@ -52,7 +51,7 @@
       return $stmt->fetchAll(PDO::FETCH_ASSOC);   
     }
 
-    function Shop () 
+    function Shop() 
     {
       $stmt= self::$_db->prepare("SELECT * FROM shop");
       $stmt->execute();
