@@ -1,6 +1,6 @@
 <footer>
   <div id="kontakt">
-    <img src="hoppe.jpg" alt="Burkhard Hoppe" />
+    <img src="img/hoppe.jpg" alt="Burkhard Hoppe" />
     <div id="kontaktdaten">
       <p>Burkhard Hoppe</p>
       <p>Bernhardstraße 19</p>

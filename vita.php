@@ -1,5 +1,5 @@
 <div id="vita">
-  <img src="profil_vita.jpg" />
+  <img src="img/profil_vita.jpg" />
   <table>
     <tr>
       <td id="datum">1965</td>  

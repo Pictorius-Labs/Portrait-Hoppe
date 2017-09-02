@@ -1,6 +1,6 @@
 <div id="image">
   <center>
-    <img src="img/1.jpg" />
+    <img src="img/slide_1.jpg" />
   </center>
 </div>
 
