@@ -183,12 +183,11 @@
     {
       float: left;
       margin-top: 10px;
-      margin-left: 0px;
+      margin-left: 0;
     }
     #shop_text 
     {
       margin-top: 10px;
-      margin-bottom: 100px;
     }
     
     #shop p
@@ -202,26 +201,15 @@
   
   @media screen and (max-width: 790px)
   {
-
-    #shop #cost 
-    {
-      float: left;
-      margin-top: 10px;
-      margin-left: 0px;
-    }
     #shop_text 
     {
       float: left;
-      margin-left: 0px;
-      margin-top: 10px;
-      margin-bottom: 100px;
+      margin-left: 0;
     }
     
     #shop p
     {
-      margin-top: 40px;
-      margin-left: 0;
-      width: 500px;
+      width: 600px;
     }
     
   }
@@ -230,55 +218,24 @@
   {
     #shop p
     {
-      margin-top: 40px;
-      margin-left: 0;
       width: 300px;
-    }
-    
-    #shop_text 
-    {
-      margin-bottom: 120px;
     }
   }
   
   @media screen and (max-width: 390px)
   {
-
-    
     #shop p
     {
-      margin-top: 40px;
-      margin-left: 0;
       width: 200px;
     }
-    
-    #shop_text 
-    {
-      margin-bottom: 220px;
-    }
-    
-   
-
   }
   
   @media screen and (max-width: 300px)
   {
-
     #shop p
     {
-      margin-top: 40px;
-      margin-left: 0;
       width: 100px;
     }
-    
-    #shop_text 
-    {
-      margin-bottom: 520px;
-    }
-    
   }
-  
-  
-  
   
 </style>

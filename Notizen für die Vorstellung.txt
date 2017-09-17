@@ -5,3 +5,4 @@ Alles testen (Sie)
 Favicon erstellen
 Responsive verbessern
 Admin-Bereich Bilder Upload
+Impressum nachtragen
