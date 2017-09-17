@@ -1,6 +1,6 @@
-https://material.io/devices/
 robots.txt ergänzen
 Alles testen (wir)
 Alles testen (Sie)
-Responsive verbessern
 Übersetzungen verbessern
+Favicon erstellen
+Responsive verbessern

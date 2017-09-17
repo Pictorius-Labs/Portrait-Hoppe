@@ -74,4 +74,27 @@
     margin-top: 10px;
   }
   
+
+  
+  @media screen and (max-width: 460px)
+  {
+
+    #news_text 
+    {
+      float: left;
+      margin-left: 10px;
+    }
+    
+    #news_pic 
+    {
+      padding-bottom: 4px;
+    }
+    
+    #news p 
+    {
+      height: 40px;
+    }
+
+  }
+  
 </style>

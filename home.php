@@ -141,7 +141,9 @@
 <br />
 <h1>„Aus meinen Steinen kommt Seele.‟</h1>
 
-<div id="news_home_all">
+<div id="home_content">
+
+  <div id="news_home_all">
   <div id="news_home_titel">
       <h2>Neuigkeiten:</h2>
   </div>
@@ -170,7 +172,7 @@
   </div>
 </div>
 
-<div id="kurse_home_all">
+  <div id="kurse_home_all">
     <div id="kurse_home_titel">
         <h2>Anstehende Kurse:</h2>
         <a href="index.php?show=kurse"><h3>Alle Kurse</h3></a>
@@ -200,6 +202,8 @@
         }
         ?>
     </div>
+</div>
+  
 </div>
 
 <style>
@@ -232,10 +236,11 @@
   #news_home_pic {
     width: 150px;
     float: left;
+    margin-left: 10px;
   }
 
   #news_home_text {
-    margin-left: 160px;
+    margin-left: 180px;
     margin-right: 30px;
   }
 
@@ -247,7 +252,7 @@
 
 
   #kurse_home_all {
-    float: left;
+    float: right;
     width: 50%;
   }
   
@@ -286,5 +291,57 @@
   #kurse_home p {
     margin-left: 10px;
     margin-top: 10px;
+  }
+  
+  @media screen and (max-width: 760px)
+  {
+    #kurse_home_all 
+    {
+      float: left;
+      width: 100%;
+    }
+    
+    #news_home_all 
+    {
+      width: 100%;
+    }
+    
+    #news_home 
+    {
+      border-right: none;
+    }
+    
+    #kurse_home_all
+    {
+      margin-left: -28px;
+    }
+
+  }
+  
+  @media screen and (max-width: 440px)
+  {
+
+    #kurse_home_titel h3 
+    {
+      float: left;
+      margin-top: 10px;
+    }
+    
+    #news_home_text 
+    {
+      float: left;
+      margin-left: 20px;
+    }
+    
+    #news_home_pic 
+    {
+      padding-bottom: 4px;
+    }
+    
+    #news_home p 
+    {
+      height: 40px;
+    }
+
   }
 </style>

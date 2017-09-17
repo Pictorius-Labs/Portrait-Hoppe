@@ -65,4 +65,42 @@
 	   font-family: Verdana,Arial,Helvetica,sans-serif;
   }
   
+  @media screen and (max-width: 880px)
+  {
+    #vita table 
+      {
+        float: left
+      }
+    
+  }
+  
+  @media screen and (max-width: 480px)
+  {
+    #vita table 
+    {
+      padding-left: 5px;
+      margin-left: -20px;
+    }
+    
+    #vita img 
+    {
+      margin-left: -40px;
+    }
+    
+  }
+  
+  @media screen and (max-width: 360px)
+  {
+    #vita table 
+    {
+      padding-left: 5px;
+      margin-left: -20px;
+    }
+    
+    #vita img 
+    {
+      margin-left: -50px;
+    }
+
+  }
 </style>

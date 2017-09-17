@@ -106,8 +106,6 @@
     border-radius: 20px;
   }
   
-  
-   
   #button:hover
   {
     color: #FFF;
@@ -225,7 +223,7 @@
     color: #000;
   }
   
-  @media screen and (max-width: 1080px)
+  @media screen and (max-width: 1150px)
   {
 	  
     #button
@@ -265,5 +263,40 @@
     }
     
 }
+  
+  @media screen and (max-width: 500px)
+  {
+	  
+   #logo
+    {
+      margin-left: 20px;
+    }
+    
+    #button_frame
+    {
+      margin-left: 60%;
+    }
+    
+  }
+  
+  @media screen and (max-width: 450px)
+  {
+	  
+    #button_frame
+    {
+      margin-left: 250px;
+    }
+    
+  }
+  
+  @media screen and (max-width: 380px)
+  {
+	  
+    #DropDown_frame
+    {
+      display: none;
+    }
+    
+  }
   
 </style>

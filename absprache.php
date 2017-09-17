@@ -1,23 +1,3 @@
-<div id ="formular_text">
-  <br />
-  <article>Für Kursabsprachen benutzen Sie bitte das nebenstehende Formular!
-    <br />
-    <br />
-    Bildhauerkurse können nach Vereinbarung für verschiedenste Gruppen mit unterschiedlichen Vorerfahrungen vereinbart werden: 
-    <br />
-    - Bildhauerei in Gasbeton (Ytong), Speckstein und Baumberger Sandstein für Kinder und Jugendliche
-    <br />
-    - Bildhauerei für Schulklassen/ Schulprojekte 
-    <br />
-    - Bildhauerei für Erwachsene mit und ohne Vorkenntnisse
-    <br />
-    <br />
-    In meinen Kursen werden zunächst die grundsätzlichen Arbeitsschritte des Skulptierens erfahren. Jeder hat Erfahrungen mit dem Modellieren, bei dem Material angetragen und weggenommen werden kann; beim Skulptieren ist abgeschlagenes Material weg. Die Formfindung bedarf also eines spezielleren Gedankenprozesses.
-    Darüber hinaus lege ich besonderen Wert auf das Einüben bildhauerischer Schlagtechniken, die auch Anfängern ermöglichen, den Kurs bis zum Ende zu genießen.
-  </article>
-</div>
-
-
 <form id="formular" action="absprache.php" method="get">
   <h2>Kursabsprachen</h2>
   <input id="name" placeholder="Name" name="name" size="25" type="text" required/>
@@ -65,14 +45,6 @@
 ?>
 
 <style>
-  #formular_text {
-    float: right;
-    width: 50%;
-    font-size: 14px;
-	   font-family: Verdana,Arial,Helvetica,sans-serif;
-    margin-right: 20px;
-    margin-top: 55px;
-  }
 
   #formular {
     float: left;
@@ -114,4 +86,15 @@
 	   font-family: Verdana,Arial,Helvetica,sans-serif;
   }
   
+  @media screen and (max-width: 800px)
+  {
+    #formular 
+    {
+      float: left;
+      width: 300px;%;
+      font-size: 14px;
+      font-family: Verdana,Arial,Helvetica,sans-serif;
+    }
+
+  }
 </style>

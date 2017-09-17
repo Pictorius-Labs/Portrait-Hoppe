@@ -83,4 +83,29 @@
     color: #3a6770;
   }
   
+  @media screen and (max-width: 500px)
+  {
+    #kontakt img
+    {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 380px)
+  {
+    #links a:last-child
+    {
+      margin-left: 26px; 
+      padding-right: 10px; 
+    }
+    
+    #links a:first-child
+    {
+      display: block; 
+      margin-top: -30px;
+      margin-bottom: 2px;
+      padding-right: 10px; 
+    }
+  }
+  
 </style>

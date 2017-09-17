@@ -7,8 +7,17 @@
     <meta charset="UTF-8" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <script src="js/jquery.js"></script>
-  </head>
   
+    <meta name="author" content="Pictorius-Labs">
+    <meta name="publisher" content="Bildhauer Burkhard Hoppe">
+    <meta name="copyright" content="Bildhauer Burkhard Hoppe">
+    <meta name="description" content="Ich fertige individuelle Skulpturen aus Naturstein. Auftragsarbeiten, Steinarbeiten und Workshops in und um Coesfeld. Besuchen Sie meine Seite und erleben Sie meine Passion mit.">
+    <meta name="keywords" content="Bildhauer, Portraitbildhauerei, Bildhauerei, in, Coesfeld, Bildhauer, in, Coesfeld, Burkhard, Hoppe, Bauschmuck, Skulptur, Relief, Grabmal">
+    <meta name="audience" content="all">
+    <meta name="robots" content="index, follow">
+    
+  </head>
+    
   <?php 
     $show='home';
       if(isset($_GET['show'])) $show=$_GET['show'];

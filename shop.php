@@ -136,7 +136,7 @@
   }
 
   #shop #cost {
-    margin-top: -25px;
+    margin-top: -18px;
     margin-right: 20px;
     margin-left: 55%;
     font-size: 14px;
@@ -166,7 +166,8 @@
 	   font-family: Verdana,Arial,Helvetica,sans-serif;
   }
 
-  #shop_formular input:last-child {
+  #shop_formular input:last-child 
+  {
     padding: 2px;
     border-radius: 5px;
     border: 1px solid black;
@@ -174,5 +175,110 @@
     font-size: 14px;
 	   font-family: Verdana,Arial,Helvetica,sans-serif;
   }
+  
+  @media screen and (max-width: 860px)
+  {
+
+    #shop #cost 
+    {
+      float: left;
+      margin-top: 10px;
+      margin-left: 0px;
+    }
+    #shop_text 
+    {
+      margin-top: 10px;
+      margin-bottom: 100px;
+    }
+    
+    #shop p
+    {
+      margin-top: 40px;
+      margin-left: 0;
+      width: 400px;
+    }
+    
+  }
+  
+  @media screen and (max-width: 790px)
+  {
+
+    #shop #cost 
+    {
+      float: left;
+      margin-top: 10px;
+      margin-left: 0px;
+    }
+    #shop_text 
+    {
+      float: left;
+      margin-left: 0px;
+      margin-top: 10px;
+      margin-bottom: 100px;
+    }
+    
+    #shop p
+    {
+      margin-top: 40px;
+      margin-left: 0;
+      width: 500px;
+    }
+    
+  }
+  
+  @media screen and (max-width: 480px)
+  {
+    #shop p
+    {
+      margin-top: 40px;
+      margin-left: 0;
+      width: 300px;
+    }
+    
+    #shop_text 
+    {
+      margin-bottom: 120px;
+    }
+  }
+  
+  @media screen and (max-width: 390px)
+  {
+
+    
+    #shop p
+    {
+      margin-top: 40px;
+      margin-left: 0;
+      width: 200px;
+    }
+    
+    #shop_text 
+    {
+      margin-bottom: 220px;
+    }
+    
+   
+
+  }
+  
+  @media screen and (max-width: 300px)
+  {
+
+    #shop p
+    {
+      margin-top: 40px;
+      margin-left: 0;
+      width: 100px;
+    }
+    
+    #shop_text 
+    {
+      margin-bottom: 520px;
+    }
+    
+  }
+  
+  
+  
   
 </style>
