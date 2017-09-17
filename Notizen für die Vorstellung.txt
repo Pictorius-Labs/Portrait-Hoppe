@@ -4,3 +4,4 @@ Alles testen (Sie)
 Übersetzungen verbessern
 Favicon erstellen
 Responsive verbessern
+Admin-Bereich Bilder Upload
