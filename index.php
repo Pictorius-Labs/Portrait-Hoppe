@@ -1,5 +1,3 @@
-<!-- Autor Markus Richert -->
-
 <html>
   
   <head>
@@ -12,7 +10,7 @@
     <meta name="publisher" content="Bildhauer Burkhard Hoppe">
     <meta name="copyright" content="Bildhauer Burkhard Hoppe">
     <meta name="description" content="Ich fertige individuelle Skulpturen aus Naturstein. Auftragsarbeiten, Steinarbeiten und Workshops in und um Coesfeld. Besuchen Sie meine Seite und erleben Sie meine Passion mit.">
-    <meta name="keywords" content="Bildhauer, Portraitbildhauerei, Bildhauerei, in, Coesfeld, Bildhauer, in, Coesfeld, Burkhard, Hoppe, Bauschmuck, Skulptur, Relief, Grabmal">
+    <meta name="keywords" content="Bildhauer, Portraitbildhauerei, Bildhauerei, in, Coesfeld, Burkhard, Hoppe, Bauschmuck, Skulptur, Relief, Grabmal">
     <meta name="audience" content="all">
     <meta name="robots" content="index, follow">
     
@@ -20,16 +18,21 @@
     
   <?php 
     $show='home';
-      if(isset($_GET['show'])) $show=$_GET['show'];
-      if(isset($_POST['show'])) $show=$_POST['show'];  
-  ?>
-  
-  <?php 
+      if(isset($_GET['show'])) $show = $_GET['show'];
+      if(isset($_POST['show'])) $show = $_POST['show'];  
+ 
+    session_start();
+
+    if(isset ($_GET['lang'])) {
+        $_SESSION['language'] = $_GET['lang'];
+    }
+
+    if(!isset($_SESSION['language'])){
+        $_SESSION['language'] = "de";
+    }
+    
     require_once 'mysql.php';
     $db = new DB();
-  ?>
-  
-  <?php
     
     $pdo = new PDO('mysql:host=localhost;dbname=portrait-hoppe', 'root', 'Nintendo56');
     $kurse = $db->KurseHome();
@@ -53,9 +56,10 @@
     
     <div id="wrapper">
       
-      <?php include('header.php'); ?>
-
-      <?php include('navigation.php'); ?>
+    <?php 
+        include('header.php');
+        include('navigation.php');
+    ?>
       
       <div id="content">
         <?php include($show.'.php'); ?>

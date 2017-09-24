@@ -1,14 +1,26 @@
 <?php
     if(isset($_GET["site"])){
-            $site = $_GET["site"];
-            }else
-            {
-                $site = "";
-            }
+        $site = $_GET["site"];
+    }else{
+        $site = "";
+    }
 
+    $LoggedIn = false;
+    session_start();
+
+    if(isset ($_GET['lang'])) {
+        $_SESSION['language'] = $_GET['lang'];
+    }
+
+    if(!isset($_SESSION['language'])){
+        $_SESSION['language'] = "de";
+    } else {
+        echo "<style> #".$_SESSION['language']."{color: lightgreen}; </style>";
+    }
+    
     require_once '../mysql.php';
     $db = new DB();
-    $LoggedIn = false;
+
     if(isset($_POST['einloggen'])) {
             $user = $_POST['benutzername'];
             $passwort = hash('sha512', $_POST['passwort'] . $user);
@@ -16,15 +28,13 @@
                 $LoggedIn = true;
                 setcookie("USR",$passwort,time()+(1800));
             } else {
-                $errorMessage = "<div id='login_fail'>Anmeldung fehlgeschlagen!</div>";	
+                $errorMessage = TRUE;	
             }
         }
     $logged = $db->LoggedIn();
-    foreach ($logged as $row) {
-    if (isset($_COOKIE["USR"]) && $row["passwort"] == $_COOKIE["USR"]) {
+    if (isset($_COOKIE["USR"]) && $logged["passwort"] == $_COOKIE["USR"]) {
             $LoggedIn = true;
         }
-    }
 ?>
 <html>
     <head>
@@ -41,7 +51,7 @@
     <body>
     <div class="login_bereich">
     <center>
-        <img src="../img/logo.gif">
+        <img src="logo.gif">
         <p>Administrator - Bereich</p>
 
         <form action=" " method="POST">
@@ -51,7 +61,7 @@
             <br>
             <?php
             if(isset($errorMessage)) {
-                echo $errorMessage;
+                echo "<div id='login_fail'>Anmeldung fehlgeschlagen!</div>";
             }
             ?>
             <input type="submit" name="einloggen" value="Anmelden">
@@ -59,14 +69,17 @@
     </center>
     </div>
     <?php
-    }
-
-    if($LoggedIn) {
+        }else{
     ?>
     <div class="menu">
-            <img src="img/logo.png">
+            <img src="logo.png">
             <p>Administrator - Bereich</p>
-        
+        <div id="lang">
+            <a href="?lang=de"><p id="de">DE</p></a>
+            <a href="?lang=en"><p id="en">EN</p></a>
+            <a href="?lang=nl"><p id="nl">NL</p></a>
+            <a href="?lang=fr"><p id="fr">FR</p></a>
+        </div>
         <div class="menu_object"><a href="?site=neuigkeiten">Neuigkeiten</a></div>
         <div class="menu_object"><a href="?site=kurse">Kurse</a></div>
         <div class="menu_object"><a href="?site=shop">Shop</a></div>
@@ -76,7 +89,7 @@
         <?php include("sites.php");?>
     </div>
     <?php
-    }
+        }
     ?>
     </body>
 </html>

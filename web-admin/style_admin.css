@@ -14,7 +14,7 @@ a {
     color: black;
 }
 
-a, article, h1, h3, p, form input, form textarea{
+a, article, h1, h3, p, form input, form textarea, pre{
     font-family: 'Poppins',sans-serif;
 }
 
@@ -84,16 +84,25 @@ form p {
     margin-bottom: -5px;
 }
 
-.menu p {
+.menu p{
     font-size: 20px;
-    padding-right: 5px;
-    padding-bottom: 15px;
-    padding-left: 10px;
-    border-bottom: 1px solid white;
+    padding: 0px 5px 0px 10px;
     margin: 0;
     color: white;
 }
 
+.menu #lang{
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid white;
+}
+
+.menu #lang p{
+    margin: 0;
+    padding: 0px 0px 0px 30px;
+    float: left;
+}
+    
 .menu_object {
     width: calc(100% - 50px);
     padding: 30px 20px 30px 30px;

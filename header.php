@@ -15,33 +15,53 @@
     <div id="menu_lang">
       <ul>
         <li>
-          <img src="img/germany_flag.png" />
-          <p>Deutsch</p>
+          <img src="img/<?php echo $_SESSION['language'];?>_flag.png"/>
+          <?php
+                if ($_SESSION['language'] == "de") {
+                    echo "<p>Deutsch</p>";
+                }elseif ($_SESSION['language'] == "en") {
+                    echo "<p>English</p>";
+                }elseif ($_SESSION['language'] == "nl") {
+                    echo "<p>Nederlands</p>";
+                }elseif ($_SESSION['language'] == "fr") {
+                    echo "<p>Français</p>";
+                }
+            ?>
         </li>
-        <li>
-          <a href="">
-            <img src="img/germany_flag.png" />
-            <p>Deutsch</p>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="img/united_kingdom_flag.png" />
-            <p>English</p>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="img/france_flag.png" />
-            <p>Français</p>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <img src="img/netherlands_flag.png" />
-            <p>Nederlands</p>
-          </a>
-        </li>
+          <?php
+                if ($_SESSION['language'] !== "de") {
+                    echo "<li>
+                            <a href='?lang=de'>
+                                <img src='img/de_flag.png' />
+                            <p>Deutsch</p>
+                            </a>
+                          </li>";
+                }
+                if ($_SESSION['language'] !== "en") {
+                    echo "<li>
+                            <a href='?lang=en'>
+                                <img src='img/en_flag.png' />
+                            <p>English</p>
+                            </a>
+                          </li>";
+                }
+                if ($_SESSION['language'] !== "nl") {
+                    echo "<li>
+                            <a href='?lang=nl'>
+                                <img src='img/nl_flag.png' />
+                            <p>Nederlands</p>
+                            </a>
+                          </li>";
+                }
+                if ($_SESSION['language'] !== "fr") {
+                    echo "<li>
+                            <a href='?lang=fr'>
+                                <img src='img/fr_flag.png' />
+                            <p>Français</p>
+                            </a>
+                          </li>";
+                }
+            ?>
       </ul>
     </div>
   </div>
