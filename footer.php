@@ -13,8 +13,8 @@
     </div>
   </div>
   <div id="links">
-    <a href="index.php?show=impressum" >Impressum</a>
-    <a href="index.php?show=agb" >AGB</a>
+    <a href="index.php?show=impressum" ><?php echo LangText()["disclaimer"]; ?></a>
+    <a href="index.php?show=agb" ><?php echo LangText()["agb"]; ?></a>
   </div>
 </footer>
 

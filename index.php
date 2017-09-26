@@ -36,18 +36,18 @@
     
     $pdo = new PDO('mysql:host=localhost;dbname=portrait-hoppe', 'root', 'Nintendo56');
     $kurse = $db->KurseHome();
-    foreach ($kurse as $row) 
-    {
+    foreach ($kurse as $row) {
       date_default_timezone_set("Europe/Berlin");
       $timestamp = time();
       $datenow = date("Y-m-d",$timestamp);
       $datekurs = $row['last_date'];
-      
       if ($datenow > $datekurs) {
         $stmt = $pdo->prepare("DELETE FROM `kurse` WHERE `kurs-id` = ".$row['kurs-id']);
         $stmt->execute();
       }
     }
+    
+    include ('LanguageText/'.$_SESSION['language'].'_language.php');
 ?>
   
  
@@ -93,12 +93,11 @@
   }
   
   #content{
-    margin-left : 20px;
-	   margin-right : 20px;
+    margin: 100px 20px 0px 20px;
     height: auto;
     padding-bottom: 14em;
+    padding-top: 20px;
     overflow: hidden;
-	   margin-top: 100px;
   }
   
 </style>

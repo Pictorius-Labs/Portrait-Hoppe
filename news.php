@@ -1,5 +1,5 @@
 <div id="news_titel">
-  <h2>Neuigkeiten:</h2>
+  <h2><?php echo LangText()["news"]; ?></h2>
   <br />
 </div>
 
@@ -10,7 +10,7 @@
     
     foreach ($news as $row) 
     {
-      $ordner = "img";
+      $ordner = "img/news";
       $bildinfo = pathinfo($ordner."/".$row['pic']); 
   ?>
 

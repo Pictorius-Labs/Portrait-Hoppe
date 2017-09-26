@@ -1,53 +1,58 @@
 <nav>
   <div id="menu_main">
     <ul>
-      <a href="index.php?show=portraits&menüpunkt=1" <?php if(isset($_GET["menüpunkt"]))if($_GET["menüpunkt"]== 1) echo"class='sie-sind-hier'"; ?>>
-        <li>
-          Portraits
+      <a href="index.php?show=portraits">
+        <li id="menu_portrait">
+          <?php echo LangText()["menuepoint_1"]; ?>
         </li>
       </a>
-      <a id="dropdown" <?php if(isset($_GET["menüpunkt"]))if($_GET["menüpunkt"]== 2) echo"class='sie-sind-hier'"; ?>>
-        <li>
-          Bildhauerei ▼
+      <a id="dropdown">
+        <li id="menu_bildhauerei">
+            <?php echo LangText()["menuepoint_2"]; ?>
         </li>
       </a>
       <div id="layer_2">
         <ul>
-          <a href="index.php?show=bauschmuck&menüpunkt=2">
+          <a href="index.php?show=bauschmuck">
             <li>
-              Bauschmuck
+                <?php echo LangText()["menuepoint_2.1"]; ?>
             </li>
           </a>
-          <a href="index.php?show=skulptur&menüpunkt=2">
+          <a href="index.php?show=skulptur">
             <li>
-              Skulptur
+                <?php echo LangText()["menuepoint_2.2"]; ?>
             </li>
           </a>
-          <a href="index.php?show=relief&menüpunkt=2">
+          <a href="index.php?show=relief">
             <li>
-              Relief
+                <?php echo LangText()["menuepoint_2.3"]; ?>
             </li>
           </a>
-          <a href="index.php?show=vorgehensweise&menüpunkt=2">
+            <a href="index.php?show=grabmal">
             <li>
-              Vorgehensweise
+                <?php echo LangText()["menuepoint_2.4"]; ?>
+            </li>
+          </a>
+          <a href="index.php?show=vorgehensweise">
+            <li>
+                <?php echo LangText()["menuepoint_2.5"]; ?>
             </li>
           </a>
         </ul>
       </div>
-      <a href="index.php?show=vita&menüpunkt=3" <?php if(isset($_GET["menüpunkt"]))if($_GET["menüpunkt"]== 3) echo"class='sie-sind-hier'"; ?>>
-        <li>
-          Vita
+      <a href="index.php?show=vita">
+        <li id="menu_vita">
+            <?php echo LangText()["menuepoint_3"]; ?>
         </li>
       </a>
-      <a href="index.php?show=news&menüpunkt=4" <?php if(isset($_GET["menüpunkt"]))if($_GET["menüpunkt"]== 4) echo"class='sie-sind-hier'"; ?>>
-        <li>
-          News
+      <a href="index.php?show=news">
+        <li id="menu_news">
+            <?php echo LangText()["menuepoint_4"]; ?>
         </li>
       </a>
-      <a href="index.php?show=kurse&menüpunkt=5" <?php if(isset($_GET["menüpunkt"]))if($_GET["menüpunkt"]== 5) echo"class='sie-sind-hier'"; ?>>
-        <li>
-          Kurse
+      <a href="index.php?show=kurse">
+        <li id="menu_kurse">
+            <?php echo LangText()["menuepoint_5"]; ?>
         </li>
       </a>
     </ul>
@@ -98,12 +103,6 @@
     color: #FFF;
   }
   
-  #menu_main ul a.sie-sind-hier li
-  {
-    color: #FFF;
-    background: #424242;
-  }
-  
   #layer_2
   {
 	  display: none;
@@ -118,20 +117,25 @@
  
   
 </style>
-
+<?php
+    if(isset($_GET['show'])) {
+        if($show == "bauschmuck" || $show == "skulptur" || $show == "relief" || $show == "vorgehensweise") {
+             echo "<style> #menu_bildhauerei {color: #FFF; background: #424242; }; </style>";
+        }else {
+        echo "<style> #menu_".$show."{color: #FFF; background: #424242; }; </style>";
+        }
+    }
+?>
 <script>
 	var dropdown = document.getElementById("dropdown");
 	var box = document.getElementById("layer_2");
 	var open = 0;
 	  
   dropdown.onclick = function(){
-    if(open == 0)
-    {
+    if(open == 0) {
       box.style.display = "block";
       open = 1; 
-    }
-    else
-    {
+    }else {
       box.style.display = "none";
       open = 0;
     }

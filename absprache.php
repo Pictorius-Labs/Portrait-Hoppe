@@ -1,5 +1,5 @@
 <form id="formular" action="absprache.php" method="get">
-  <h2>Kursabsprachen</h2>
+  <h2><?php echo LangText()["kurs_absprache_title"]; ?></h2>
   <input id="name" placeholder="Name" name="name" size="25" type="text" required/>
   <br />
   <input id="email" placeholder="Email" name="email" size="25" type="email" required/>

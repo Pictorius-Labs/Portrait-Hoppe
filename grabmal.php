@@ -1,12 +1,12 @@
 <div id="image">
   <center>
-    <img src="img/sites/intropic_4.jpg" />
+    <img src="img/sites/intropic_5.jpg" />
   </center>
 </div>
 
 <div id="text">
   <p>
-    <?php echo LangText()["relief"]; ?>
+    <?php echo LangText()["grabmal"]; ?>
   </p>
 </div>
 

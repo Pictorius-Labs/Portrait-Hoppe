@@ -1,27 +1,14 @@
 <div id="kurse_titel">
-  <h2>Kurse:</h2>
-  <a href="index.php?show=absprache"><h3>Für Kursabsprachen <u>hier klicken</u></h3></a>
+  <h2><?php echo LangText()["kurs"]; ?></h2>
+  <a href="index.php?show=absprache"><h3><?php echo LangText()["kurs_absprache"]; ?></h3></a>
   <br />
   <img src="img/kurse_showcase.jpg" />
 </div>
 
 <div id ="formular_text">
-  <br />
-  <article>Für Kursabsprachen benutzen Sie bitte das nebenstehende Formular!
-    <br />
-    <br />
-    Bildhauerkurse können nach Vereinbarung für verschiedenste Gruppen mit unterschiedlichen Vorerfahrungen vereinbart werden: 
-    <br />
-    - Bildhauerei in Speckstein und Baumberger Sandstein für Kinder und Jugendliche
-    <br />
-    - Bildhauerei für Schulklassen/ Schulprojekte 
-    <br />
-    - Bildhauerei für Erwachsene mit und ohne Vorkenntnisse
-    <br />
-    <br />
-    In meinen Kursen werden zunächst die grundsätzlichen Arbeitsschritte des Skulptierens erfahren. Jeder hat Erfahrungen mit dem Modellieren, bei dem Material angetragen und weggenommen werden kann; beim Skulptieren ist abgeschlagenes Material weg. Die Formfindung bedarf also eines spezielleren Gedankenprozesses.
-    Darüber hinaus lege ich besonderen Wert auf das Einüben bildhauerischer Schlagtechniken, die auch Anfängern ermöglichen, den Kurs bis zum Ende zu genießen.
-  </article>
+  <p>
+    <?php echo LangText()["kurs_text"]; ?>
+  </p>
 </div>
 
 <div id ="kurse">
@@ -56,12 +43,10 @@
 
 <style>
   
-  #formular_text 
+  #formular_text
   {
-    float: right;
-    width: 68%;
     font-size: 14px;
-	   font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
   }
   
   #kurse_titel, #kurse
@@ -98,9 +83,9 @@
   
   #kurse_titel img 
   {
-    height: 737px;
-    width: 500px;
+    width: 300px;
     float: left;
+      padding-right: 10px;
   }
 
   #kurse 
@@ -128,8 +113,6 @@
 
     #formular_text 
     {
-      float: left;
-      width: 100%;
       font-size: 14px;
       font-family: Verdana,Arial,Helvetica,sans-serif;
       margin-bottom: 80px;

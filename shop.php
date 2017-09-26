@@ -1,5 +1,5 @@
 <div id="shop_titel">
-  <h2>Shop</h2>
+  <h2><?php echo LangText()["shop"]; ?></h2>
   <br />
 </div>
 

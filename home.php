@@ -65,7 +65,7 @@
       /* size of bullet elment */
       width: 16px;
       height: 16px;
-      background: url('img/b05.png') no-repeat;
+      background: url('img/slider/b05.png') no-repeat;
       overflow: hidden;
       cursor: pointer;
   }
@@ -92,7 +92,7 @@
       width: 30px;
       height: 46px;
       cursor: pointer;
-      background: url('img/a12.png') no-repeat;
+      background: url('img/slider/a12.png') no-repeat;
       overflow: hidden;
   }
   
@@ -107,20 +107,20 @@
     
 <div id="jssor_1" style="position:relative;margin:auto;top:0px;left:0px;width:600px;height:300px;overflow:hidden;visibility:hidden;">
   <!-- Loading Screen -->
-  <div data-u="loading" style="position:absolute;top:0px;left:0px;background:url('img/loading.gif') no-repeat 50% 50%;background-color:rgba(0, 0, 0, 0.7);"></div>
+  <div data-u="loading" style="position:absolute;top:0px;left:0px;background:url('img/slider/loading.gif') no-repeat 50% 50%;background-color:rgba(0, 0, 0, 0.7);"></div>
   <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:600px;height:300px;overflow:hidden;">
 
       <div>
-          <img data-u="image" src="img/slide_1.jpg" />
+          <img data-u="image" src="img/slider/slide_1.jpg" />
       </div>
       <div>
-          <img data-u="image" src="img/slide_2.jpg" />
+          <img data-u="image" src="img/slider/slide_2.jpg" />
       </div>
       <div>
-          <img data-u="image" src="img/slide_3.jpg" />
+          <img data-u="image" src="img/slider/slide_3.jpg" />
       </div>
       <div>
-          <img data-u="image" src="img/slide_4.jpg" />
+          <img data-u="image" src="img/slider/slide_4.jpg" />
       </div>
 
       <a data-u="any" href="https://www.jssor.com" style="display:none">js slider</a>
@@ -139,20 +139,20 @@
 <!-- #endregion Jssor Slider End -->
 
 <br />
-<h1>„Aus meinen Steinen kommt Seele.‟</h1>
+<h1><?php echo LangText()["home_soul"]; ?></h1>
 
 <div id="home_content">
 
   <div id="news_home_all">
   <div id="news_home_titel">
-      <h2>Neuigkeiten:</h2>
+      <h2><?php echo LangText()["news"]; ?></h2>
   </div>
   <div id ="news_home">
 
       <?php
           $news = $db->NewsHome();                    
           foreach ($news as $row) {
-              $ordner = "img";
+              $ordner = "img/news";
               $bildinfo = pathinfo($ordner."/".$row['pic']); 
       ?>
 
@@ -174,8 +174,8 @@
 
   <div id="kurse_home_all">
     <div id="kurse_home_titel">
-        <h2>Anstehende Kurse:</h2>
-        <a href="index.php?show=kurse"><h3>Alle Kurse</h3></a>
+        <h2><?php echo LangText()["kurs_home"]; ?></h2>
+        <a href="index.php?show=kurse"><h3><?php echo LangText()["kurs_home_all"]; ?></h3></a>
     </div>
     <div id ="kurse_home">
 

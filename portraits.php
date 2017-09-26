@@ -1,24 +1,12 @@
 <div id="image">
   <center>
-    <img src="img/intropic_1.jpg" />
+    <img src="img/sites/intropic_1.jpg" />
   </center>
 </div>
 
 <div id="text">
   <p>
-    <br />
-    "Einem wertvollen Menschen ein
-    <br />
-    DENKmal! setzen, in den Dialog
-    <br />
-    treten mit einer inspirierenden
-    <br />
-    Persönlichkeit, das Wesen eines
-    <br />
-    Menschen im Stein erhalten:
-    <br />
-    <br />
-    Das ist Portrait Bildhauerei."
+    <?php echo LangText()["portrait"]; ?>
   </p>
 </div>
 

@@ -1,15 +1,12 @@
 <div id="image">
   <center>
-    <img src="img/intropic_3.jpg" />
+    <img src="img/sites/intropic_3.jpg" />
   </center>
 </div>
 
 <div id="text">
   <p>
-    <br />
-    "Entspannung im Garten,
-    <br />
-    Kult-tour, Ambiente"
+    <?php echo LangText()["skulptur"]; ?>
   </p>
 </div>
 
@@ -20,8 +17,7 @@
     margin-right:20px;
     margin-left:20px;
     margin-top: 20px;
-    height:310px;
-    width:1000px;
+    width: 70%;
   }
   
   #text p

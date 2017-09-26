@@ -8,14 +8,14 @@
   <a id="button_frame" href="index.php?show=shop">
     <div id="button">
       <i class="material-icons">shopping_cart</i>
-      <p>Shop</p>
+      <p><?php echo LangText()["shop"]; ?></p>
     </div>
   </a>
   <div id="DropDown_frame">
     <div id="menu_lang">
       <ul>
         <li>
-          <img src="img/<?php echo $_SESSION['language'];?>_flag.png"/>
+          <img src="img/flags/<?php echo $_SESSION['language'];?>_flag.png"/>
           <?php
                 if ($_SESSION['language'] == "de") {
                     echo "<p>Deutsch</p>";
@@ -143,8 +143,8 @@
     text-decoration: none;
     color: #000;
     margin-top: -70px;
-    margin-left: 76%;
-    position: absolute;
+    margin-right: 170px;
+    float: right;
   }
   
   #DropDown_frame
@@ -243,31 +243,23 @@
     color: #000;
   }
   
-  @media screen and (max-width: 1150px)
-  {
-	  
-    #button
-	   {
-      width: 40px;
-	   }
-	  
-	   #button p
-	   {
-		    display: none;
-	   }
-	  
-	   #button i
-	   {
-      margin-left: 8px;
-	   }
-    
-    #menu_lang ul
-    {
+  @media screen and (max-width: 600px) {
+    #button {
       width: 40px;
     }
-  
-    #menu_lang ul li img
-    {
+    #button p {
+        display: none;
+    }
+    #button i {
+        margin-left: 8px;
+    } 
+    #button_frame {
+        margin-right: 80px;
+    }
+    #menu_lang ul {
+      width: 40px;
+    }
+    #menu_lang ul li img {
       padding-left: 5px;
     }
   
@@ -281,42 +273,25 @@
       height: 40px;
       width: 40px;
     }
-    
 }
-  
-  @media screen and (max-width: 500px)
-  {
-	  
+    
+@media screen and (max-width: 850px) {
    #logo
     {
       margin-left: 20px;
     }
-    
-    #button_frame
-    {
-      margin-left: 60%;
-    }
-    
   }
   
-  @media screen and (max-width: 450px)
-  {
-	  
-    #button_frame
-    {
-      margin-left: 250px;
-    }
-    
-  }
-  
-  @media screen and (max-width: 380px)
+  @media screen and (max-width: 420px)
   {
 	  
     #DropDown_frame
     {
       display: none;
     }
-    
+      #button_frame {
+          margin-right: 20px;
+      }
   }
   
 </style>
