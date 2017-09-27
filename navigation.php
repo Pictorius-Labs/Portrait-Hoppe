@@ -28,14 +28,9 @@
                 <?php echo LangText()["menuepoint_2.3"]; ?>
             </li>
           </a>
-            <a href="index.php?show=grabmal">
-            <li>
-                <?php echo LangText()["menuepoint_2.4"]; ?>
-            </li>
-          </a>
           <a href="index.php?show=vorgehensweise">
             <li>
-                <?php echo LangText()["menuepoint_2.5"]; ?>
+                <?php echo LangText()["menuepoint_2.4"]; ?>
             </li>
           </a>
         </ul>

@@ -9,8 +9,7 @@ function LangText() {
         "menuepoint_2.1" => "Bauschmuck",
         "menuepoint_2.2" => "Skulptur",
         "menuepoint_2.3" => "Relief",
-        "menuepoint_2.4" => "Grabmal",
-        "menuepoint_2.5" => "Vorgehensweise",
+        "menuepoint_2.4" => "Vorgehensweise",
         "menuepoint_3" => "Vita",
         "menuepoint_4" => "News",
         "menuepoint_5" => "Kurse",
@@ -24,8 +23,6 @@ function LangText() {
         "skulptur" => '"Entspannung im Garten, Kult-tour, Ambiente"',
 /** Relief **/
         "relief" => '"Ornamente, Wappen, Symbole und Pictogramme bieten Identität"',
-/** Grabmal **/
-        "grabmal" => '"Zeichen finden für das Andenken an geliebte Menschen. Individuell. Persönlich. Nah.“',
 /** Vorgehensweise **/
             "vorgehensweise" => '<b>Für Portraits</b> benötige ich Vorlagen aus verschiedenen Perspektiven, um einenräumlichen Eindruck zu gewinnen. Diese können vom Auftraggeber eingereichtoder vom Auftragnehmer angefertigt werden.Soll das Portrait Perönlichkeit ausstrahlen, sind darüber hinaus weitere Informationen über die darzustellende Person (Charakter-eigenschaften, Hobbies, Interessen etc.) wichtig.Die Wahl von Größe, Material und Ausarbeitung geschieht in Absprache mit dem Auftraggeber. Daraufhin erfolgt eine detaillierte Angebotsbeschreibung mit Kostenvoranschlag. Wird das Angebot angenommen und der Auftrag erteilt, ist ein erster Abschlag in Höhe eines Drittels der Auftragssumme zu zahlen. Bei Portraits wird vor der Ausarbeitung in Stein ein Modell erstellt. Der Auftraggeber nimmt das Modell unter Absprache in einem gemeinsam festgesetzten Zeitraum ab und zahlt vor der weiteren Umsetzung in Stein ein zweites Drittel der Auftragssumme.
             <br />
