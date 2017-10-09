@@ -1,8 +1,7 @@
 robots.txt ergänzen
 Alles testen (wir)
 Alles testen (Sie)
-Übersetzungen verbessern
+Übersetzungen verbessern (Footer und Formular placeholder)
+Formular nebenstehender text kurse ändern
 Favicon erstellen
-Responsive verbessern
-Admin-Bereich Bilder Upload
-Impressum nachtragen
+Uploads nummerieren

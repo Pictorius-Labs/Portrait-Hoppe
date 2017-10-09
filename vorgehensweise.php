@@ -17,7 +17,8 @@
     margin-right:20px;
     margin-left:20px;
     margin-top: 20px;
-    width: 70%;
+    height:410px;
+    width:665px;
   }
   
   #text p

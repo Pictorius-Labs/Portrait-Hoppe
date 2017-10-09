@@ -2,7 +2,7 @@
   <h2><?php echo LangText()["kurs"]; ?></h2>
   <a href="index.php?show=absprache"><h3><?php echo LangText()["kurs_absprache"]; ?></h3></a>
   <br />
-  <img src="img/kurse_showcase.jpg" />
+  <img src="img/sites/kurse_showcase.jpg" />
 </div>
 
 <div id ="formular_text">

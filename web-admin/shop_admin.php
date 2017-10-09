@@ -12,22 +12,24 @@
             $product = htmlentities($_POST['product']);
             $description = htmlentities($_POST['description']);
             $cost = htmlentities($_POST['cost'].'€');
-            $pic = $_POST['pic'];
+            $pic = $_FILES['pic']['name'];
+            move_uploaded_file($_FILES['pic']['tmp_name'], '../img/shop/'.$_FILES['pic']['name']);
 
             if($db->newShop($product, $description, $cost, $pic) === TRUE) { 
-                 $showNewShop = false;
+                $showNewShop = false;
                 echo "<h3>Produkt hinzugefügt!</h3>";
-                echo "<meta http-equiv='Refresh' content='2; URL=?site=shop'>";    
+                echo "<meta http-equiv='Refresh' content='2; URL=?site=shop'>";  
+              
             }
         }
 
                 if($showNewShop) {
     ?>
-            <form id="formular" action="?site=shop&newShop" method="post">
+            <form id="formular" action="?site=shop&newShop" method="post" enctype="multipart/form-data">
                 <input placeholder="Produktname" name="product" type="text" required/><br />
                 <textarea  placeholder="Beschreibung"cols="50" rows="5" name="description" required></textarea><br />
                 <input placeholder="Preis" name="cost" type="text" />€<br />
-                <input placeholder="Bildname" name="pic" type="text" /><br />
+                <input name="pic" type="file" /><br />
                 <input id="submit" name="submit" type="submit" value="Hinzufügen!" />
             </form>
 

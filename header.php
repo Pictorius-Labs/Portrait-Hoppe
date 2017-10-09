@@ -32,7 +32,7 @@
                 if ($_SESSION['language'] !== "de") {
                     echo "<li>
                             <a href='?lang=de'>
-                                <img src='img/de_flag.png' />
+                                <img src='img/flags/de_flag.png' />
                             <p>Deutsch</p>
                             </a>
                           </li>";
@@ -40,7 +40,7 @@
                 if ($_SESSION['language'] !== "en") {
                     echo "<li>
                             <a href='?lang=en'>
-                                <img src='img/en_flag.png' />
+                                <img src='img/flags/en_flag.png' />
                             <p>English</p>
                             </a>
                           </li>";
@@ -48,7 +48,7 @@
                 if ($_SESSION['language'] !== "nl") {
                     echo "<li>
                             <a href='?lang=nl'>
-                                <img src='img/nl_flag.png' />
+                                <img src='img/flags/nl_flag.png' />
                             <p>Nederlands</p>
                             </a>
                           </li>";
@@ -56,7 +56,7 @@
                 if ($_SESSION['language'] !== "fr") {
                     echo "<li>
                             <a href='?lang=fr'>
-                                <img src='img/fr_flag.png' />
+                                <img src='img/flags/fr_flag.png' />
                             <p>Français</p>
                             </a>
                           </li>";

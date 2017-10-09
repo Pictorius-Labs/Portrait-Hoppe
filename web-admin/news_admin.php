@@ -11,10 +11,11 @@
         if (isset($_POST["submit"])){
             $date = $_POST['date'];
             $description = htmlentities($_POST['description']);
-            $pic = $_POST['pic'];
+            $pic = $_FILES['pic']['name'];
+            move_uploaded_file($_FILES['pic']['tmp_name'], '../img/news/'.$_FILES['pic']['name']);
 
             if($db->newNews($date, $description, $pic) === TRUE) { 
-                 $showNewNews = false;
+                $showNewNews = false;
                 echo "<h3>Eintrag hinzugefügt!</h3>";
                 echo "<meta http-equiv='Refresh' content='2; URL=?site=neuigkeiten'>";    
             }
@@ -22,10 +23,10 @@
 
                 if($showNewNews) {
     ?>
-            <form id="formular" action="?site=neuigkeiten&newNews" method="post">
+            <form id="formular" action="?site=neuigkeiten&newNews" method="post" enctype="multipart/form-data">
                 <input id="date" placeholder="Datum bzw. Titel" name="date" size="25" type="text" required/><br />
                 <textarea id="description" placeholder="Beschreibung"cols="50" rows="5" name="description"required></textarea><br />
-                <input id="pic" placeholder="Bildname" name="pic" size="25" type="text" /><br />
+                <input id="pic" name="pic" size="25" type="file" /><br />
                 <input id="submit" name="submit" type="submit" value="Hinzufügen!" />
             </form>
     <?php
