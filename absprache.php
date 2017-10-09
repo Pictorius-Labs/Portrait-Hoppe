@@ -1,4 +1,17 @@
-<form id="formular" action="absprache.php" method="get">
+<?php 
+    ini_set( 'display_errors', 1 );
+    error_reporting( E_ALL );
+    $from = "test@portrait-hoppe.de";
+    $to = "markus@die-richerts.de";
+    $subject = "PHP Mail Test script";
+    $message = "This is a test to check the PHP Mail functionality";
+    $headers = "From:" . $from;
+    mail($to,$subject,$message, $headers);
+    echo "Test email sent";
+?>
+
+
+<form id="formular" action="" method="post">
   <h2><?php echo LangText()["kurs_absprache_title"]; ?></h2>
   <input id="name" placeholder="Name" name="name" size="25" type="text" required/>
   <br />
@@ -18,7 +31,7 @@
     {
       // Sammeln der Formulardaten
       $from = "test@portrait-hoppe.de";
-      $to = "windows8user@web.de";
+      $to = "markus@die-richerts.de";
       $subject = "Eine neue Nachricht von portrait-hoppe.de";
       $message = "Guten Tag Herr Hoppe, " 
         . "\n" 
