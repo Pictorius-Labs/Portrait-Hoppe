@@ -1,4 +1,4 @@
-<div id="shop_titel">
+﻿<div id="shop_titel">
   <h2><?php echo LangText()["shop"]; ?></h2>
   <br />
 </div>
@@ -31,8 +31,8 @@
     if (isset($_POST["submit"]))
     {
     // Sammeln der Formulardaten
-    $from = "test@portrait-hoppe.de";
-    $to = "windows8user@web.de";
+    $from = "b.hoppe@portrait-hoppe.de";
+    $to = "b.hoppe@portrait-hoppe.de";
     $subject = "Eine neue Nachricht von portrait-hoppe.de";
     $message = "Guten Tag Herr Hoppe, " 
       . "\n" 
@@ -54,7 +54,7 @@
     $headers[] = 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
     $headers[] = "From:" . $from;
 
-    mail($to,$subject,$message, implode("\r\n",$headers));
+    mail($to,"=?UTF-8?B?".base64_encode("$subject")."?=",$message, implode($headers));
     };
 ?>
 

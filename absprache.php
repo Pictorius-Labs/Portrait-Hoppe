@@ -1,37 +1,11 @@
-<?php 
-    ini_set( 'display_errors', 1 );
-    error_reporting( E_ALL );
-    $from = "test@portrait-hoppe.de";
-    $to = "markus@die-richerts.de";
-    $subject = "PHP Mail Test script";
-    $message = "This is a test to check the PHP Mail functionality";
-    $headers = "From:" . $from;
-    mail($to,$subject,$message, $headers);
-    echo "Test email sent";
-?>
-
-
-<form id="formular" action="" method="post">
-  <h2><?php echo LangText()["kurs_absprache_title"]; ?></h2>
-  <input id="name" placeholder="Name" name="name" size="25" type="text" required/>
-  <br />
-  <input id="email" placeholder="Email" name="email" size="25" type="email" required/>
-  <br />
-  <input id="betreff" placeholder="Betreff" name="betreff" size="25" type="text" required/>
-  <br />
-  <textarea id="nachricht" placeholder="Nachricht hier eingeben..."cols="50" rows="6" name="nachricht" required></textarea>
-  <br />
-  <input id="submit" name="submit" type="submit" value="Anfrage senden" />
-</form>
-
-<?php
-    
-    // Ausführen wenn Formular gesendet
+﻿<?php
+$showform = true;
+// Ausführen wenn Formular gesendet
     if (isset($_POST["submit"]))
     {
       // Sammeln der Formulardaten
-      $from = "test@portrait-hoppe.de";
-      $to = "markus@die-richerts.de";
+      $from = "b.hoppe@portrait-hoppe.de";
+      $to = "b.hoppe@portrait-hoppe.de";
       $subject = "Eine neue Nachricht von portrait-hoppe.de";
       $message = "Guten Tag Herr Hoppe, " 
         . "\n" 
@@ -53,22 +27,47 @@
       $headers[] = 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
       $headers[] = "From:" . $from;
 
-      mail($to,$subject,$message, implode("\r\n",$headers));
+      mail($to,"=?UTF-8?B?".base64_encode("$subject")."?=",$message, implode($headers));
+      echo "<p id='success'>Ihre Anfrage wurde erfolgreich versendet !</p>";
+      echo "<meta http-equiv='Refresh' content='2; URL=index.php'>";
+      $showform = false;
     };
+if($showform) {
 ?>
 
+
+<form id="formular" action="" method="post">
+  <h2><?php echo LangText()["kurs_absprache_title"]; ?></h2>
+  <input id="name" placeholder="Name" name="name" size="25" type="text" required/>
+  <br />
+  <input id="email" placeholder="Email" name="email" size="25" type="email" required/>
+  <br />
+  <input id="betreff" placeholder="Betreff" name="betreff" size="25" type="text" required/>
+  <br />
+  <textarea id="nachricht" placeholder="Nachricht hier eingeben..."cols="50" rows="6" name="nachricht" required></textarea>
+  <br />
+  <input id="submit" name="submit" type="submit" value="Anfrage senden" />
+</form>
+
+<?php } ?>
+
 <style>
+
+  #success {
+	   font-size: 20px;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+  }
 
   #formular {
     float: left;
     width: 45%;
     font-size: 14px;
-	   font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
   }
   
   #formular h2 {
     font-size: 20px;
-	   font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
     margin-top: 20px;
     margin-bottom: 20px;
   }
