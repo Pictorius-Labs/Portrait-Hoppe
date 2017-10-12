@@ -5,3 +5,4 @@ Alles testen (Sie)
 Formular nebenstehender text kurse ändern
 Favicon erstellen
 Uploads nummerieren
+Von Shop-/Kurs-/News-Beiträgen Objekte machen
