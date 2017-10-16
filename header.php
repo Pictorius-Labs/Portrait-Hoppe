@@ -28,7 +28,9 @@
                 }
             ?>
         </li>
-          <?php
+          
+        <?php
+        /*
                 if ($_SESSION['language'] !== "de") {
                     echo "<li>
                             <a href='?lang=de'>
@@ -61,7 +63,8 @@
                             </a>
                           </li>";
                 }
-            ?>
+        */
+        ?>
       </ul>
     </div>
   </div>
@@ -169,13 +172,13 @@
     display: block;
   }
   
-  #menu_lang ul:hover li:first-child
+  /*#menu_lang ul:hover li:first-child
   {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     display: block;
     border-bottom: #000 solid 1px;
-  }
+  }*/
   
   #menu_lang ul li
   {
