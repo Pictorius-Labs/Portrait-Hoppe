@@ -1,6 +1,7 @@
 <?php
     session_start();
-    session_destroy();
-    setcookie("USR","",time() - 3600);
+    require_once '../mysql.php';
+    $db = new DB();
+    $db->logout();
     echo '<meta http-equiv="Refresh" content="0; URL=../web-admin/">';
 ?>

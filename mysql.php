@@ -59,16 +59,9 @@
      //Admin-Interface   
 
         function LoggedIn() {
-            $stmt = self::$_db->prepare("SELECT passwort FROM web_admin WHERE 1");
-            $stmt->execute();
-
-            return $stmt->fetch();
-        }
-
-        function login($user, $passwort) {
-            $stmt = self::$_db->prepare("SELECT ID FROM web_admin WHERE benutzername=:benutzername AND passwort=:pw");
-            $stmt->bindParam(":benutzername", $user);
-            $stmt->bindParam(":pw", $passwort);
+            $stmt = self::$_db->prepare("SELECT ID FROM web_admin WHERE Session=:sid");
+            $sid = session_id();
+            $stmt->bindParam(":sid", $sid);
             $stmt->execute();
 
             if($stmt->rowCount() === 1) {
@@ -76,6 +69,28 @@
             } else {
                 return false;	
             }
+        }
+
+        function login($user, $passwort) {
+            $stmt = self::$_db->prepare("UPDATE web_admin SET Session=:sid WHERE benutzername=:benutzername AND passwort=:pw");
+            $stmt->bindParam(":benutzername", $user);
+            $stmt->bindParam(":pw", $passwort);
+            $sid = session_id();
+            $stmt->bindParam(":sid", $sid);
+            $stmt->execute();
+
+            if($stmt->rowCount() === 1) {
+                return true;
+            } else {
+                return false;	
+            }
+        }
+        
+        function logout() {
+        $stmt = self::$_db->prepare("UPDATE web_admin SET Session='' WHERE Session=:sid");
+        $sid = session_id();
+        $stmt->bindParam(":sid", $sid);
+        $stmt->execute();
         }
 
         function newNews($date, $description, $pic) {

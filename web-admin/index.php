@@ -26,13 +26,12 @@
             $passwort = hash('sha512', $_POST['passwort'] . $user);
             if($db->login($user, $passwort) === TRUE) { 
                 $LoggedIn = true;
-                setcookie("USR",$passwort,time()+(1800));
             } else {
                 $errorMessage = TRUE;	
             }
         }
     $logged = $db->LoggedIn();
-    if (isset($_COOKIE["USR"]) && $logged["passwort"] == $_COOKIE["USR"]) {
+    if ($logged === TRUE) {
             $LoggedIn = true;
         }
 ?>

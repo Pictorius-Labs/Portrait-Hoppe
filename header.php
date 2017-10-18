@@ -10,7 +10,8 @@
       <i class="material-icons">shopping_cart</i>
       <p><?php echo LangText()["shop"]; ?></p>
     </div>
-  </a>
+    </a>
+<!--
   <div id="DropDown_frame">
     <div id="menu_lang">
       <ul>
@@ -30,7 +31,7 @@
         </li>
           
         <?php
-        /*
+        
                 if ($_SESSION['language'] !== "de") {
                     echo "<li>
                             <a href='?lang=de'>
@@ -63,11 +64,11 @@
                             </a>
                           </li>";
                 }
-        */
         ?>
       </ul>
     </div>
   </div>
+-->
 </header>
 
 <style>
@@ -146,7 +147,7 @@
     text-decoration: none;
     color: #000;
     margin-top: -70px;
-    margin-right: 170px;
+    margin-right: 20px;
     float: right;
   }
   
@@ -257,7 +258,7 @@
         margin-left: 8px;
     } 
     #button_frame {
-        margin-right: 80px;
+        margin-right: 20px;
     }
     #menu_lang ul {
       width: 40px;
