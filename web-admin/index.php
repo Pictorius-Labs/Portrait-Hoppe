@@ -82,6 +82,7 @@
         <div class="menu_object"><a href="?site=neuigkeiten">Neuigkeiten</a></div>
         <div class="menu_object"><a href="?site=kurse">Kurse</a></div>
         <div class="menu_object"><a href="?site=shop">Shop</a></div>
+        <div class="menu_object"><a href="?site=slider">Slider</a></div>
         <div class="menu_object"><a href="logout.php">Abmelden</a></div>
     </div>
     <div class="content">

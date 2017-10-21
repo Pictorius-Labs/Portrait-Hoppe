@@ -41,9 +41,14 @@
             <?php
                 if (isset($_GET["delNews"])){
                     $news_id = $_GET['delNews'];
+                    $pic_delete = $db->delNewspic($news_id);
+                    $ordner = "../img/news";  
+                    $picname = explode('&', $pic_delete['0']);   
+                    $pic = $ordner."/".$picname['0'];
+                    unlink ($pic);
                     if($db->delNews($news_id) === TRUE) { 
                         echo "<h3>Eintrag wurde gelöscht!</h3>";
-                        echo "<meta http-equiv='Refresh' content='2; URL=?site=neuigkeiten'>";    
+                        echo "<meta http-equiv='Refresh' content='2; URL=?site=neuigkeiten'>";
                     }
                 }
                 $news = $db->News();                    

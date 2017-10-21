@@ -55,6 +55,14 @@
 
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
+        
+        function Slider () {
+
+            $stmt= self::$_db->prepare("SELECT * FROM slider WHERE 1");
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
 
      //Admin-Interface   
 
@@ -87,10 +95,10 @@
         }
         
         function logout() {
-        $stmt = self::$_db->prepare("UPDATE web_admin SET Session='' WHERE Session=:sid");
-        $sid = session_id();
-        $stmt->bindParam(":sid", $sid);
-        $stmt->execute();
+            $stmt = self::$_db->prepare("UPDATE web_admin SET Session='' WHERE Session=:sid");
+            $sid = session_id();
+            $stmt->bindParam(":sid", $sid);
+            $stmt->execute();
         }
 
         function newNews($date, $description, $pic) {
@@ -118,6 +126,14 @@
                 return false;	
             }
         }
+        
+        function delNewspic($news_id) {
+            $stmt = self::$_db->prepare("SELECT pic FROM news_".$_SESSION['language']." WHERE `news-id`=:news_id");
+            $stmt->bindParam(":news_id", $news_id);
+            $stmt->execute();
+
+            return $stmt->fetch();
+        }
 
         function newKurs($title, $time, $date, $first_date, $last_date, $home_description, $description) {
             $stmt = self::$_db->prepare("INSERT INTO kurse_".$_SESSION['language']." VALUES (:title, :date, :last_date, '', :time, :description, :home_description, '')");
@@ -136,9 +152,9 @@
                 return false;	
             }
         }
-
+        
         function delKurs($kurs_id) {
-            $stmt = self::$_db->prepare("DELETE FROM kurse_".$_SESSION['language']." WHERE `kurs-id`=:kurs_id");
+            $stmt = self::$_db->prepare("SELECT FROM kurse_".$_SESSION['language']." WHERE `kurs-id`=:kurs_id");
             $stmt->bindParam(":kurs_id", $kurs_id);
             $stmt->execute();
 
@@ -148,6 +164,7 @@
                 return false;	
             }
         }
+
 
         function newShop($product, $description, $cost, $pic) {
             $stmt = self::$_db->prepare("INSERT INTO shop_".$_SESSION['language']." VALUES ('', :pic, :product, :cost, :description)");
@@ -174,6 +191,39 @@
             } else {
                 return false;	
             }
+        }
+        
+        function newSlider($pic) {
+            $stmt = self::$_db->prepare("INSERT INTO slider VALUES (:pic, '')");
+            $stmt->bindParam(":pic", $pic);
+            $stmt->execute();
+
+            if($stmt->rowCount() === 1) {
+                return true;
+            } else {
+                return false;	
+            }
+        }
+        
+        function delSliderpic($id) {
+            $stmt = self::$_db->prepare("SELECT pic FROM slider WHERE `id`=:id");
+            $stmt->bindParam(":id", $id);
+            $stmt->execute();
+
+            return $stmt->fetch();
+        }
+        
+        function delSlider($id) {
+            $stmt = self::$_db->prepare("DELETE FROM slider WHERE `id`=:id");
+            $stmt->bindParam(":id", $id);
+            $stmt->execute();
+
+            if($stmt->rowCount() === 1) {
+                return true;
+            } else {
+                return false;	
+            }
+            
         }
 
 

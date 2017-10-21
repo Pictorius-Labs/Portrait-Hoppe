@@ -110,19 +110,21 @@
   <div data-u="loading" style="position:absolute;top:0px;left:0px;background:url('img/slider/loading.gif') no-repeat 50% 50%;background-color:rgba(0, 0, 0, 0.7);"></div>
   <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:600px;height:300px;overflow:hidden;">
 
-      <div>
-          <img data-u="image" src="img/slider/slide_1.jpg" />
-      </div>
-      <div>
-          <img data-u="image" src="img/slider/slide_2.jpg" />
-      </div>
-      <div>
-          <img data-u="image" src="img/slider/slide_3.jpg" />
-      </div>
-      <div>
-          <img data-u="image" src="img/slider/slide_4.jpg" />
-      </div>
-
+<?php
+      $slider = $db->Slider();                    
+    
+    foreach ($slider as $row) {
+        
+      $ordner = "img/slider";
+      $bildinfo = pathinfo($ordner."/".$row['pic']); 
+  ?>
+    <div>
+        <img data-u="image" src="<?php echo $bildinfo['dirname']."/".$bildinfo['basename'];?>"/>
+    </div>
+  <?php
+    }
+  ?>
+      
       <a data-u="any" href="https://www.jssor.com" style="display:none">js slider</a>
     
   </div>

@@ -1,11 +1,11 @@
-﻿<?php
+<?php
 $showform = true;
 // Ausführen wenn Formular gesendet
     if (isset($_POST["submit"]))
     {
       // Sammeln der Formulardaten
       $from = "b.hoppe@portrait-hoppe.de";
-      $to = "b.hoppe@portrait-hoppe.de";
+      $to = "stevenbrozda@gmail.com";
       $subject = "Eine neue Nachricht von portrait-hoppe.de";
       $message = "Guten Tag Herr Hoppe, " 
         . "\n" 

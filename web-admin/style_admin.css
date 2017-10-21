@@ -114,7 +114,7 @@ form p {
     color: white;
 }
 
-@media screen and (min-height: 470px) {
+@media screen and (min-height: 570px) {
     .menu_object:last-child {
         position: fixed;
         bottom: 0;
@@ -191,4 +191,20 @@ form p {
 .site #shop_text p {
     clear: right;
     margin: 0;
+}
+
+.slider_object { 
+}
+
+#slider_pic{
+    width: 300px; 
+    height: 200px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    float: left;
+}
+
+#slider_text {
+    float: left;
+    margin-left: -80px;
 }
