@@ -58,7 +58,7 @@
 
   #menu_main
   {
-	   position: fixed;
+	position: fixed;
     width: 300px;
     height: 100%;
     background: #E0E0E0;
@@ -73,6 +73,7 @@
     padding: 10px;
     font-family: Arial;
     font-size: 18px;
+	list-style-type:none;
   }
    
   #menu_main ul li:hover

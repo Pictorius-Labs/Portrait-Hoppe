@@ -6,6 +6,7 @@
 <?php
   $showShop = true;
   $showFormular = false;
+  
   if(isset($_GET['betreff'])) {
     $showShop = false;
     $showFormular = true;
@@ -13,7 +14,7 @@
     if($showFormular) {
   ?>
 
-  <form id="shop_formular" action="index.php?show=shop" method="post">
+  <form id="shop_formular" action="" method="post">
     <input id="name" placeholder="Vorname, Name" name="name" size="25" type="text" required/>
     <br />
     <input id="email" placeholder="Email" name="email" size="25" type="email" required/>
@@ -55,6 +56,7 @@
     $headers[] = "From:" . $from;
 
     mail($to,"=?UTF-8?B?".base64_encode("$subject")."?=",$message, implode($headers));
+    echo "<meta http-equiv='Refresh' content='0; URL=index.php?show=shop'>";
     };
 ?>
 
@@ -69,7 +71,7 @@
   <?php
     $news = $db->Shop();                    
     foreach ($news as $row) {
-      $ordner = "img";
+      $ordner = "img/shop";
       $bildinfo = pathinfo($ordner."/".$row['pic']); 
       if($showShop) {
   ?>
