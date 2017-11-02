@@ -2,7 +2,7 @@
   <div id="menu_main">
     <ul>
       <a href="index.php?show=portraits">
-        <li id="menu_portrait">
+        <li id="menu_portraits">
           <?php echo LangText()["menuepoint_1"]; ?>
         </li>
       </a>
@@ -14,22 +14,22 @@
       <div id="layer_2">
         <ul>
           <a href="index.php?show=bauschmuck">
-            <li>
+            <li id="menu_bauschmuck">
                 <?php echo LangText()["menuepoint_2.1"]; ?>
             </li>
           </a>
           <a href="index.php?show=skulptur">
-            <li>
+            <li id="menu_skulptur">
                 <?php echo LangText()["menuepoint_2.2"]; ?>
             </li>
           </a>
           <a href="index.php?show=relief">
-            <li>
+            <li id="menu_relief">
                 <?php echo LangText()["menuepoint_2.3"]; ?>
             </li>
           </a>
           <a href="index.php?show=vorgehensweise">
-            <li>
+            <li id="menu_vorgehensweise">
                 <?php echo LangText()["menuepoint_2.4"]; ?>
             </li>
           </a>
@@ -88,7 +88,7 @@
     color: #000;
   }
    
-  #menu_main ul #layer_2 li
+  #menu_main ul #layer_2
   {
     background: #BDBDBD;
   }
@@ -114,13 +114,13 @@
   
 </style>
 <?php
-    if(isset($_GET['show'])) {
-        if($show == "bauschmuck" || $show == "skulptur" || $show == "relief" || $show == "vorgehensweise") {
-             echo "<style> #menu_bildhauerei {color: #FFF; background: #424242; }; </style>";
-        }else {
+    $show = $_GET['show'];
+    if(isset($show)) {
         echo "<style> #menu_".$show."{color: #FFF; background: #424242; }; </style>";
-        }
     }
+        if($show == "bauschmuck" || $show == "skulptur" || $show == "relief" || $show == "vorgehensweise") {
+            echo "<style>#layer_2 {display: block; }</style>";
+        }
 ?>
 <script>
 	var dropdown = document.getElementById("dropdown");
