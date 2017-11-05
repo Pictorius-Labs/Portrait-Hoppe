@@ -136,14 +136,14 @@
         }
 
         function newKurs($title, $time, $date, $first_date, $last_date, $home_description, $description) {
-            $stmt = self::$_db->prepare("INSERT INTO kurse_".$_SESSION['language']." VALUES (:title, :date, :last_date, '', :time, :description, :home_description, '')");
+            $stmt = self::$_db->prepare("INSERT INTO kurse_".$_SESSION['language']." VALUES (:title, :date, :first_date, :last_date, :time, :description, :home_description, '')");
             $stmt->bindParam(":title", $title);
+			$stmt->bindParam(":time", $time);
             $stmt->bindParam(":date", $date);
             $stmt->bindParam(":first_date", $first_date);
             $stmt->bindParam(":last_date", $last_date);
-            $stmt->bindParam(":time", $time);
-            $stmt->bindParam(":description", $description);
             $stmt->bindParam(":home_description", $home_description);
+            $stmt->bindParam(":description", $description);
             $stmt->execute();
 
             if($stmt->rowCount() === 1) {
@@ -154,7 +154,7 @@
         }
         
         function delKurs($kurs_id) {
-            $stmt = self::$_db->prepare("SELECT FROM kurse_".$_SESSION['language']." WHERE `kurs-id`=:kurs_id");
+            $stmt = self::$_db->prepare("DELETE FROM kurse_".$_SESSION['language']." WHERE `kurs-id`=:kurs_id");
             $stmt->bindParam(":kurs_id", $kurs_id);
             $stmt->execute();
 
