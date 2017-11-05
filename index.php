@@ -17,11 +17,16 @@
   </head>
     
   <?php 
-    $show='home';
-      if(isset($_GET['show'])) $show = $_GET['show'];
-      if(isset($_POST['show'])) $show = $_POST['show'];  
+    
+	  
+    if(isset($_GET['show'])) $show = $_GET['show'];
+    if(isset($_POST['show'])) $show = $_POST['show'];  
+	
+	
  
     session_start();
+	
+	
 
     if(isset ($_GET['lang'])) {
         $_SESSION['language'] = $_GET['lang'];
@@ -62,7 +67,8 @@
     ?>
       
       <div id="content">
-        <?php include($show.'.php'); ?>
+		
+        <?php if(is_null($show)) {$show='home';} include($show.'.php'); ?>
       </div>
       
       <?php include('footer.php'); ?>
