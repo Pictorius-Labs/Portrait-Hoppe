@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 24. Sep 2017 um 17:13
--- Server-Version: 10.1.22-MariaDB
--- PHP-Version: 7.1.4
+-- Erstellungszeit: 10. Nov 2017 um 22:03
+-- Server-Version: 10.1.26-MariaDB
+-- PHP-Version: 7.0.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -119,11 +119,7 @@ CREATE TABLE `news_de` (
 --
 
 INSERT INTO `news_de` (`news-id`, `pic`, `date`, `description`) VALUES
-(1, '1.jpg', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam'),
-(2, '2.jpg', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam'),
-(3, '2.jpg', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam'),
-(4, '4.jpg', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam'),
-(5, '1.jpg', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam');
+(3, '2.jpg', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam');
 
 -- --------------------------------------------------------
 
@@ -183,8 +179,6 @@ CREATE TABLE `shop_de` (
 --
 
 INSERT INTO `shop_de` (`id`, `pic`, `product`, `cost`, `description`) VALUES
-(1, 'shop_1.jpg', 'Skulptur von Stevorino dem 3.', '1.999&euro;', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam'),
-(2, 'shop_2.jpg', 'Skulptur von Marrrrcus dem 1.', '1.999&euro;', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam'),
 (3, 'shop_3.jpg', 'Skulptur von Damn Daniel dem 2.', '1.999&euro;', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam');
 
 -- --------------------------------------------------------
@@ -232,6 +226,27 @@ CREATE TABLE `shop_nl` (
 -- --------------------------------------------------------
 
 --
+-- Tabellenstruktur für Tabelle `slider`
+--
+
+CREATE TABLE `slider` (
+  `pic` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Daten für Tabelle `slider`
+--
+
+INSERT INTO `slider` (`pic`, `id`) VALUES
+('slide_1.jpg', 6),
+('slide_2.jpg', 7),
+('slide_3.jpg', 8),
+('slide_4.jpg', 9);
+
+-- --------------------------------------------------------
+
+--
 -- Tabellenstruktur für Tabelle `web_admin`
 --
 
@@ -247,7 +262,7 @@ CREATE TABLE `web_admin` (
 --
 
 INSERT INTO `web_admin` (`benutzername`, `passwort`, `ID`, `Session`) VALUES
-('Burkhard-Hoppe', '8db5dcba2fc4033b794bee47212e06dab77c263ecc25301642bba843a2529ae33249f4b0a1725c75d994a6728963b7849be6a6aa51c712b82df35610def7c4ae', 1, '');
+('Burkhard-Hoppe', '8db5dcba2fc4033b794bee47212e06dab77c263ecc25301642bba843a2529ae33249f4b0a1725c75d994a6728963b7849be6a6aa51c712b82df35610def7c4ae', 1, '230oa2mf2d90m92aeuhdau9913');
 
 --
 -- Indizes der exportierten Tabellen
@@ -326,6 +341,12 @@ ALTER TABLE `shop_nl`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indizes für die Tabelle `slider`
+--
+ALTER TABLE `slider`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indizes für die Tabelle `web_admin`
 --
 ALTER TABLE `web_admin`
@@ -339,67 +360,86 @@ ALTER TABLE `web_admin`
 -- AUTO_INCREMENT für Tabelle `kurse_de`
 --
 ALTER TABLE `kurse_de`
-  MODIFY `kurs-id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `kurs-id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT für Tabelle `kurse_en`
 --
 ALTER TABLE `kurse_en`
   MODIFY `kurs-id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT für Tabelle `kurse_fr`
 --
 ALTER TABLE `kurse_fr`
   MODIFY `kurs-id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT für Tabelle `kurse_nl`
 --
 ALTER TABLE `kurse_nl`
   MODIFY `kurs-id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT für Tabelle `news_de`
 --
 ALTER TABLE `news_de`
   MODIFY `news-id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT für Tabelle `news_en`
 --
 ALTER TABLE `news_en`
   MODIFY `news-id` int(100) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT für Tabelle `news_fr`
 --
 ALTER TABLE `news_fr`
   MODIFY `news-id` int(100) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT für Tabelle `news_nl`
 --
 ALTER TABLE `news_nl`
   MODIFY `news-id` int(100) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT für Tabelle `shop_de`
 --
 ALTER TABLE `shop_de`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT für Tabelle `shop_en`
 --
 ALTER TABLE `shop_en`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT für Tabelle `shop_fr`
 --
 ALTER TABLE `shop_fr`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT für Tabelle `shop_nl`
 --
 ALTER TABLE `shop_nl`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `slider`
+--
+ALTER TABLE `slider`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
 -- AUTO_INCREMENT für Tabelle `web_admin`
 --
 ALTER TABLE `web_admin`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

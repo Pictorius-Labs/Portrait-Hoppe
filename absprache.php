@@ -5,7 +5,7 @@ $showform = true;
     {
       // Sammeln der Formulardaten
       $from = "b.hoppe@portrait-hoppe.de";
-      $to = "stevenbrozda@gmail.com";
+      $to = "b.hoppe@portrait-hoppe.de";
       $subject = "Eine neue Nachricht von portrait-hoppe.de";
       $message = "Guten Tag Herr Hoppe, " 
         . "\n" 

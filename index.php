@@ -67,7 +67,6 @@
     ?>
       
       <div id="content">
-		
         <?php if(is_null($show)) {$show='home';} include($show.'.php'); ?>
       </div>
       
